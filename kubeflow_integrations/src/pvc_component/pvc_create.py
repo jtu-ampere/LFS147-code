@@ -46,7 +46,7 @@ def monitor_pvc_status(api_instance, namespace, pvc_name, timeout_period, max_ti
         # Increment the timeout counter and wait before the next check
         timeout_total += 1
         time.sleep(timeout_period)
-@dsl.component(target_image='chasechristensen/volume_component:v2')
+@dsl.component(target_image='mrdojojo/volume_component:v4')
 def create_volume(pvc_name: str,timeout_period: float,max_timeout: float,storage_size: float)-> str:
     # Define the PVC specifications
     config.load_incluster_config()

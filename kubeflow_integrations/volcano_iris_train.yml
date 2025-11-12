@@ -15,7 +15,7 @@ spec:
               claimName: <PVC NAME>
           containers:
           - name: xgboost
-            image: chasechristensen/xgboost_train:v1
+            image: mrdojojo/xgboost_train:v1
             volumeMounts:
               - name: task-pv-storage
                 mountPath: /tmp/xgboost_model
@@ -41,7 +41,7 @@ spec:
               claimName: <PVC NAME>
           containers:
           - name: xgboost
-            image: chasechristensen/xgboost_train:v1
+            image: mrdojojo/xgboost_train:v1
             volumeMounts:
               - name: task-pv-storage
                 mountPath: /tmp/xgboost_model
